@@ -1,7 +1,6 @@
 require "yaml"
 
 def load_library(directory)
-  YAML.load_file('lib/emoticons.yml')
     get_meaning, get_emoticon = {}, {}
   YAML.load_file(directory).each do |desc, data|
     get_meaning[data[1]] = desc
